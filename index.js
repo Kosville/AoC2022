@@ -7,6 +7,7 @@ const { day4 } = require('./day4/day4');
 const { day4_2 } = require('./day4/day4_2');
 const { day5 } = require('./day5/day5');
 const { day5_2 } = require('./day5/day5_2');
+const { day6 } = require('./day6/day6');
 
 // day1
 // console.log(day1());
@@ -26,4 +27,8 @@ const { day5_2 } = require('./day5/day5_2');
 
 //day5
 // console.log(day5())
-console.log(day5_2())
+// console.log(day5_2())
+
+//day6
+console.log(day6())
+// console.log(day6_2())

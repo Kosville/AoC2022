@@ -29,27 +29,29 @@ const getStackArrays = (input) => {
 }
 
 const assignCommand = (c, stacks) => {
-  for (let i = 0; i < c[0]; i++) {
-    const v = stacks[c[1]-1].pop();
-    stacks[c[2]-1].push(v)
-  }
-  return stacks
+  const count = c[0];
+  const from = c[1]-1;
+  const to = c[2]-1;
+  const v = stacks[from].splice(stacks[from].length - count)
+  stacks[to].push(...v)
+  return stacks;
 }
 
-let topString = '';
 let stacks = [];
 
-const day5 = () => {
+const day5_2 = () => {
   const input = getInput();
   stacks = getStackArrays(input)
 
   const commands =  input.split('\n\n')[1].split('\n').map(c => c.split(' ').filter((co, i) => i%2 !== 0).map(n => parseInt(n)));
 
   commands.forEach(c => {
-    stacks = assignCommand(c, stacks);
+    if (c && c[0]) {
+      stacks = assignCommand(c, stacks);
+    }
   })
 
   return flatten(stacks.map(s => s.pop())).join('');
 }
 
-module.exports = {day5}
+module.exports = {day5_2}
