@@ -10,6 +10,9 @@ const { day5_2 } = require('./day5/day5_2');
 const { day6 } = require('./day6/day6');
 const { day7 } = require('./day7/day7');
 const { day7_2 } = require('./day7/day7_2');
+const { day8 } = require('./day8/day8');
+const { day8_2 } = require('./day8/day8_2');
+// const { day9 } = require('./day9/day9');
 
 // day1
 // console.log(day1());
@@ -37,4 +40,12 @@ const { day7_2 } = require('./day7/day7_2');
 
 //day7
 // console.log(day7())
-console.log(day7_2())
+// console.log(day7_2())
+
+//day8
+// console.log(day8())
+// console.log(day8_2())
+
+//day9
+// console.log(day9())
+// console.log(day9_2())
